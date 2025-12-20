@@ -3,6 +3,12 @@ import joblib
 import re
 import pandas as pd
 import numpy as np
+
+# download nltk packages
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -12,9 +18,6 @@ import time
 # set model and vectorizer
 model_prediksi = joblib.load(open("model_prediksi.pkl","rb"))
 vectorizer = joblib.load(open("vectorizer.pkl","rb"))
-
-nltk.download('punkt')
-nltk.download('stopwords')
 
 # make a text processor funtion
 def olah_kata(text):
@@ -90,4 +93,5 @@ with tab2:
     "Model ini dilatih menggunakan data set berita ISOT yang memiliki lebih dari 40.000 artikel berita, yang sudah dilabeli sebagai True (nyata) atau Fake (Palsu). " \
 
     "Model yang telah dilatih mencapai 99% dalam akurasi, presisi, dan recall")
+
 
