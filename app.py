@@ -13,6 +13,16 @@ import time
 model_prediksi = joblib.load(open("model_prediksi.pkl","rb"))
 vectorizer = joblib.load(open("vectorizer.pkl","rb"))
 
+try:
+    nltk.data.find('tokenizers/punkt')
+except nltk.downloader.DownloadError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('corpora/stopwords')
+except nltk.downloader.DownloadError:
+    nltk.download('stopwords')
+
 # make a text processor funtion
 def olah_kata(text):
     # symbols and tabs removal
@@ -85,4 +95,5 @@ with tab2:
 
     st.write("Aplikasi berbasis web ini dibuat menggunakan streamlit, dan model yang digunakan untuk mengklasifikasi masukkan dalam bentuk teks adalah Support Vector Machine dengan kernel Linear. " \
     "Model ini dilatih menggunakan data set berita ISOT yang memiliki lebih dari 40.000 artikel berita, yang sudah dilabeli sebagai True (nyata) atau Fake (Palsu). " \
+
     "Model yang telah dilatih mencapai 99% dalam akurasi, presisi, dan recall")
