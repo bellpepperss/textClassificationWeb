@@ -1,0 +1,7 @@
+joblib==1.5.2
+re
+pandas
+numpy
+nltk
+scikit-learn
+time
