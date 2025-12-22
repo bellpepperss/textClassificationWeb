@@ -56,13 +56,17 @@ def prediksi_txt(text):
 tab1, tab2 = st.tabs(["Home", "About"])
 
 with tab1:
-    st.header("Text Based Misinformation and Disinformation Detector")
-    st.write("Guide:")
-    st.write("1. Put an article/text (in english) in the text box")
-    st.write("2. Click the Predict button")
-    st.write("Panduan:")
-    st.write("1. Masukkan sebuah artikel/teks (dalam bahasa inggris) ke dalam kotak teks")
-    st.write("2. Klik tombol Predict")
+    st.write("Guide:\n" \
+    "1. Put an article/text (in English) in the text box\n" \
+    "2. Click the Predict button\n" \
+    "" \
+    "\nTips: try copy and pasting an article from The Onion! The expected output should be 'fake'")
+    
+    st.write("Panduan:\n" \
+    "1. Masukkan sebuah artikel/teks (dalam Bahasa Inggris) ke dalam kotak teks\n" \
+    "2. Klik tombol Predict\n" \
+    "" \
+    "\nTips: cobalah salin dan tempel suatu artikel dari situs bernama The Onion! Ekspektasi hasilnya adalah 'Palsu'")
 
     Text = st.text_area(
         label="",
@@ -93,5 +97,6 @@ with tab2:
     "Model ini dilatih menggunakan data set berita ISOT yang memiliki lebih dari 40.000 artikel berita, yang sudah dilabeli sebagai True (nyata) atau Fake (Palsu). " \
 
     "Model yang telah dilatih mencapai 99% dalam akurasi, presisi, dan recall")
+
 
 
