@@ -57,16 +57,18 @@ tab1, tab2 = st.tabs(["Home", "About"])
 
 with tab1:
     st.write("Guide:\n" \
-    "1. Put an article/text (in English) in the text box\n" \
-    "2. Click the Predict button\n" \
-    "" \
-    "\nTips: try copy and pasting an article from The Onion! The expected output should be 'fake'")
-    
+    "1. Put an article/text (in English) in the text box. This model works best for news about the US political left/right wing news\n" \
+    "2. Click the Predict button\n")
+    st.write("Tips: First, Let's try copy and pasting a news from trusted sites, such as Reuters. The output should be 'true'. " \
+             "Now, try copy and pasting an article from The Onion, a known satirical news site. The expected output should be 'fake'.")
+    st.write("Remember, this is a work in progress and a prediction model, so you should verify the sources yourself!")
+
     st.write("Panduan:\n" \
-    "1. Masukkan sebuah artikel/teks (dalam Bahasa Inggris) ke dalam kotak teks\n" \
-    "2. Klik tombol Predict\n" \
-    "" \
-    "\nTips: cobalah salin dan tempel suatu artikel dari situs bernama The Onion! Ekspektasi hasilnya adalah 'Palsu'")
+    "1. Masukkan sebuah artikel/teks (dalam Bahasa Inggris) ke dalam kotak teks. Model ini bekerja lebih baik untuk berita seputar politik AS\n" \
+    "2. Klik tombol Predict\n")
+    st.write("Tips: Pertama, cobalah salin dan tempel sebuah berita dari situs terpercaya seperti Reuters. Ekspektasi hasilnya adalah 'nyata'." \
+             "Sekarang, cobalah salin dan tempel sebuah artikel dari The Onion, sebuah situs berita satir yang ternama. ekspektasi hasilnya adalah 'palsu'.")
+    st.write("Ingat, ini merupakan pekerjaan yang sedang berlangsung, jadi jangan lupa untuk memverifikasi sumbernya secara mandiri!")
 
     Text = st.text_area(
         label="",
@@ -97,6 +99,7 @@ with tab2:
     "Model ini dilatih menggunakan data set berita ISOT yang memiliki lebih dari 40.000 artikel berita, yang sudah dilabeli sebagai True (nyata) atau Fake (Palsu). " \
 
     "Model yang telah dilatih mencapai 99% dalam akurasi, presisi, dan recall")
+
 
 
 
