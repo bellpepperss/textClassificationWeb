@@ -92,14 +92,11 @@ with tab2:
     st.header("About the App")
     
     st.write("This web app is made using streamlit, and the model used for classifying text input is the Support Vector Machine with linear kernel. " \
-    "The model is trained with the ISOT news dataset which contained over 40,000 news article, labelled as True or Fake. " \
-    "The trained model achieved a 99% in accuracy, precision, and recall")
+    "The model is trained with the ISOT news dataset which contained over 40,000 political news article, labelled as True or Fake. " \
+    "The trained model achieved a 99% in accuracy, precision, and recall. ")
 
     st.write("Aplikasi berbasis web ini dibuat menggunakan streamlit, dan model yang digunakan untuk mengklasifikasi masukkan dalam bentuk teks adalah Support Vector Machine dengan kernel Linear. " \
-    "Model ini dilatih menggunakan data set berita ISOT yang memiliki lebih dari 40.000 artikel berita, yang sudah dilabeli sebagai True (nyata) atau Fake (Palsu). " \
-
+    "Model ini dilatih menggunakan data set berita ISOT yang memiliki lebih dari 40.000 artikel berita politik, yang sudah dilabeli sebagai True (nyata) atau Fake (Palsu). " \
     "Model yang telah dilatih mencapai 99% dalam akurasi, presisi, dan recall")
 
-
-
-
+    st.image("confusion_matrix.png", caption="Confusion Matrix of the Model's Performance")
